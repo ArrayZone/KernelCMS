@@ -1,0 +1,1 @@
+<?php echo kw::t('Your message has been sent', 'contact'); ?>

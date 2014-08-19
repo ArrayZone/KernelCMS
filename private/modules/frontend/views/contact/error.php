@@ -1,0 +1,1 @@
+<?php echo kw::t('Message could not be sent. Please, contact with an administrator.', 'contact'); ?>

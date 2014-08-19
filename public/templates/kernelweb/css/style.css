@@ -1,0 +1,126 @@
+/*
+    FIX OLDER BROWSERS  and RESETS
+*/
+header, section, footer, aside, nav, main, article, figure {
+	display: block;
+}
+* { margin:0; padding:0; }
+
+pre { overflow:auto; 
+	/*	Force line break */ 
+	-ms-word-break: break-all; word-break: break-all; 
+ 	/* Non standard for webkit */
+	word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto;
+}
+/*
+	BASIC
+*/
+html { font-size:11pt; line-height:12pt; }
+main h1 { font-size:20pt; color:#156fb5; margin:0 0 15px; }
+main h2 { font-size:18pt; color:#156fb5; margin:0 0 15px; }
+main h3 { font-size:16pt; color:#156fb5; margin:0 0 15px; }
+
+main div, main p { margin:5px 0; }
+
+/*
+	GENERIC COLORS
+*/
+a {  color:#4B80B4; text-decoration:none;  }
+a:hover { color:#444444;  }
+
+/*
+    STRUCTURE
+*/
+.table { display:table; }
+.table > div { display:table-row; }
+.table > div > div{ display:table-cell; }
+
+.left { text-align:left; }
+.center { text-align:center; }
+.right { text-align:right; }
+
+body { background:#297ACC; }
+body > * > div { width:1000px; margin:0 auto; }
+body > header { background:#156FB5; }
+/*header, #content, footer {  } */
+body > header, body > footer { color:#fff; }
+
+/* HEADER */
+header > div { height:60px; overflow:hidden; }
+header > div > * { float:left; }
+header .buscador { float:right; }
+#banner { margin:15px 0; }
+#banner img { -webkit-transition:all; transition:0.8s;  }
+#banner img:hover { opacity:0.5; }
+
+header nav { height:100%; line-height:60px; /* Con LineHeight centraremos */ }
+header nav > a { width:100px; height:100%; display:inline-block; overflow:hidden; color:#fff; text-align:center; font-size:12pt; padding:0 4px;
+-webkit-transition:all; transition:0.4s; }
+header nav > a:hover { background:none; background:#1266A7; color:inherit; }
+
+footer { border-top:14px solid #143D66; padding:20px;  font-size:13pt; line-height:14pt; }
+footer a { color:#fff; text-decoration:underline; }
+footer > div > div > div {  width:33%; } 
+
+
+#banner, #menu_left { width:20%; float:left; }
+main { background:#fff; width:75%; float:right; padding:15px; overflow:hidden; 
+	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+#content { padding:40px 0; background:#dedeff; overflow:hidden; }
+
+.flags { float:right; margin-top:25px; }
+.flags img { margin:0 0 0 10px; width:25px; height:15px; }
+
+
+/*
+	MENU BAR
+*/
+#menu_left section { padding:0 0 5px; margin:0 0 30px; }
+#menu_left section > h2 { color:#fff; background:#156FB5; text-align:center; font-weight:normal; font-size:16pt;  line-height:28pt; border-radius:5px 5px 0 0; }
+#menu_left section > div { margin:0 auto; border:#156FB5 2px solid; padding:0 10px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+
+#menu_left .enlaces > div > a { display:block; margin:10px 0; font-size:13pt; line-height:13pt; color:#444444;  }
+#menu_left .enlaces > div > a:hover { color:#4B80B4; }
+
+#menu_left .novedades article { margin:10px 0; }
+#menu_left .novedades article > h3 { color:#444444;  font-size:14pt;  line-height:20pt; }
+
+
+/*
+ * Responsive
+ */
+@media (max-width: 320px) {
+	header nav a { float:none; width:100%;}	
+}
+ 
+@media (min-width:321px) and (max-width: 500px) {
+	header nav { line-height:inherit; width:100%;  }
+	header nav a { float:none; width:50%;}	
+}
+
+@media (min-width:501px) and (max-width: 700px) {
+	header nav a { width:33.3%; }
+	#menu_left section { width:48%; float:left; }
+}
+
+@media (max-width: 700px) {
+	header > div { height:auto; }
+	#banner { width:100%; float:none; }
+	
+	header nav { line-height:inherit; width:100%; }
+	header nav a { padding:10px 0; }
+	
+	.flags { clear:both; float:none; text-align:center; }
+	.flags img { margin:10px; }
+	
+	body > * > div { width:97%; }
+	#menu_left { width:100%; float:none; }
+	
+	main { clear:both; width:100% !important; float:none; }
+	
+	.table, .table > div, .table > div  > div  { display:block; width:100%; text-align:center; margin:10px 0; }
+}
+@media (min-width: 700px) and (max-width: 1000px) {
+	body > * > div { width:97%; }
+
+}
